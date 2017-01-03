@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: microblog
+logging:
+  level:
+    org:
+      springframework: DEBUG
+
+server:
+  port: 8081
+  context-path: /microblog
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      grant-type: authorization_code
+      user-authorization-uri: http://localhost:8080/uc/oauth/authorize
+      access-token-uri: http://localhost:8080/uc/oauth/token
+      client-id: microblog
+      client-secret: secret123
+      scope: read
+    resource:
+      token-info-uri: http://localhost:8080/uc/oauth/check_token
