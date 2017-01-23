@@ -12,7 +12,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  * @author KimLoong
  */
 @SpringBootApplication
-@EnableOAuth2Sso
 public class Application {
 
     public static void main(String[] args) {
