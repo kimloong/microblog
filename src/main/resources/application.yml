@@ -14,12 +14,10 @@ security:
   basic:
     enabled: false
   oauth2:
+    resource:
+      id: microblog
+      token-info-uri: http://localhost:8080/uc/oauth/check_token
     client:
-      grant-type: authorization_code
-      user-authorization-uri: http://localhost:8080/uc/oauth/authorize
-      access-token-uri: http://localhost:8080/uc/oauth/token
       client-id: microblog
       client-secret: secret123
-      scope: read
-    resource:
-      token-info-uri: http://localhost:8080/uc/oauth/check_token
+
